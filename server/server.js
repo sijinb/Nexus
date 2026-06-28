@@ -3,6 +3,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const axios = require('axios');
 const store = require('./data/store');
+const path = require('path');
 
 dotenv.config();
 
@@ -40,9 +41,19 @@ app.get('/api/stats', (req, res) => {
   });
 });
 
-app.get('/', (req, res) => {
-  res.send('NEXUS Operations Control online.');
+//app.get('/', (req, res) => {
+//  res.send('NEXUS Operations Control online.');
+
+// 1. Serve the frontend static files (HTML, CSS, JS)
+app.use(express.static(path.join(__dirname, '../client/build')));
+
+// 2. Catch-all route: If someone goes to any URL, send them the index.html
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 });
+
+
+//});
 
 // Start listening
 app.listen(PORT, () => {
