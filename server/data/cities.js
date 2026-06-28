@@ -1,0 +1,22 @@
+module.exports = [
+  { id: "delhi", name: "Delhi NCR", lat: 28.6139, lng: 77.2090, population: 32000000 },
+  { id: "mumbai", name: "Mumbai", lat: 19.0760, lng: 72.8777, population: 21000000 },
+  { id: "bengaluru", name: "Bengaluru", lat: 12.9716, lng: 77.5946, population: 13000000 },
+  { id: "hyderabad", name: "Hyderabad", lat: 17.3850, lng: 78.4867, population: 10000000 },
+  { id: "chennai", name: "Chennai", lat: 13.0827, lng: 80.2707, population: 11000000 },
+  { id: "kolkata", name: "Kolkata", lat: 22.5726, lng: 88.3639, population: 15000000 },
+  { id: "pune", name: "Pune", lat: 18.5204, lng: 73.8567, population: 7000000 },
+  { id: "ahmedabad", name: "Ahmedabad", lat: 23.0225, lng: 72.5714, population: 8000000 },
+  { id: "jaipur", name: "Jaipur", lat: 26.9124, lng: 75.7873, population: 4000000 },
+  { id: "lucknow", name: "Lucknow", lat: 26.8467, lng: 80.9462, population: 4000000 },
+  { id: "kochi", name: "Kochi", lat: 9.9312, lng: 76.2673, population: 2000000 },
+  { id: "chandigarh", name: "Chandigarh", lat: 30.7333, lng: 76.7794, population: 1000000 },
+  { id: "bhopal", name: "Bhopal", lat: 23.2599, lng: 77.4126, population: 2000000 },
+  { id: "nagpur", name: "Nagpur", lat: 21.1458, lng: 79.0882, population: 3000000 },
+  { id: "patna", name: "Patna", lat: 25.5941, lng: 85.1376, population: 2000000 },
+  { id: "bhubaneswar", name: "Bhubaneswar", lat: 20.2961, lng: 85.8245, population: 1000000 },
+  { id: "guwahati", name: "Guwahati", lat: 26.1445, lng: 91.7362, population: 1000000 },
+  { id: "surat", name: "Surat", lat: 21.1702, lng: 72.8311, population: 7000000 },
+  { id: "amritsar", name: "Amritsar", lat: 31.6340, lng: 74.8723, population: 1000000 },
+  { id: "coimbatore", name: "Coimbatore", lat: 11.0168, lng: 76.9558, population: 2000000 }
+];
