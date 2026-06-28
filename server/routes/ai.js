@@ -8,7 +8,16 @@ const axios = require('axios');
 // Initialize Gemini Client
 let genAI = null;
 let gemini = null;
-if (process.env.GEMINI_API_KEY && process.env.GEMINI_API_KEY.startsWith('AIzaSy')) {
+const isValidApiKey = (key) => {
+  if (!key) return false;
+  const k = key.trim();
+  if (k === '' || k.includes('YOUR_') || k.includes('your_key_here') || k.includes('placeholder')) {
+    return false;
+  }
+  return true;
+};
+
+if (isValidApiKey(process.env.GEMINI_API_KEY)) {
   try {
     genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
     gemini = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });

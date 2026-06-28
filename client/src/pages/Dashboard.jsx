@@ -281,7 +281,10 @@ export default function Dashboard({ alerts, triggerToast }) {
     if (isDemoRunning) return;
     setIsDemoRunning(true);
     
-    const apiHost = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+    let apiHost = import.meta.env.VITE_API_URL || 'http://localhost:8080';
+    if (apiHost && !apiHost.startsWith('http://') && !apiHost.startsWith('https://')) {
+      apiHost = `https://${apiHost}`;
+    }
     
     // Step 0: [0s] Activate
     triggerToast({

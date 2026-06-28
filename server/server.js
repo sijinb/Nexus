@@ -60,7 +60,10 @@ app.listen(PORT, () => {
   console.log(`NEXUS India API Server running on port ${PORT}`);
   
   // Sleep Prevention (Critical for Render Free Tier)
-  const SELF_URL = process.env.RENDER_EXTERNAL_URL || 'http://localhost:8080';
+  let SELF_URL = process.env.RENDER_EXTERNAL_URL || 'http://localhost:8080';
+  if (SELF_URL && !SELF_URL.startsWith('http://') && !SELF_URL.startsWith('https://')) {
+    SELF_URL = `https://${SELF_URL}`;
+  }
   console.log(`Keep-alive self-ping configured targeting: ${SELF_URL}/health`);
   
   setInterval(() => {

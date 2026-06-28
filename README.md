@@ -704,7 +704,7 @@ Response: {
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `REACT_APP_API_URL` | ✅ Yes | Backend URL. Set to `http://localhost:8080` locally |
+| `VITE_API_URL` | ✅ Yes | Backend URL. Set to `http://localhost:8080` locally |
 
 > All other services (Open-Meteo, Nominatim, CartoDB tiles, OpenStreetMap)
 > are completely free and require no API keys.
@@ -789,9 +789,9 @@ node server.js
 # Frontend setup (new terminal)
 cd ../client
 npm install
-echo "REACT_APP_API_URL=http://localhost:8080" > .env
-npm start
-# Frontend runs at http://localhost:3000
+echo "VITE_API_URL=http://localhost:8080" > .env
+npm run dev
+# Frontend runs at http://localhost:5173
 ```
 
 ### Available Scripts
@@ -802,9 +802,8 @@ node server.js          # Start server
 node server.js --watch  # With auto-restart (Node 18+)
 
 # Frontend
-npm start               # Development server
+npm run dev             # Development server
 npm run build           # Production build
-npm test                # Run tests
 ```
 
 ---
