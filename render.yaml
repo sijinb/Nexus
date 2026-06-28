@@ -18,7 +18,7 @@ services:
   - type: static
     name: nexus-client
     rootDir: client
-    buildCommand: npm install && npm run build
+    buildCommand: npm install --legacy-peer-deps && npm run build
     staticPublishPath: ./build
     routes:
       - type: rewrite
